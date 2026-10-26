@@ -59,18 +59,25 @@ print("Data successfully loaded from SQL Server! Total rows:", len(df))
 # print(verification_df)
 
 # Task: Get the Top 10 users who saw the most ads
-# query = """
-# SELECT TOP 10 
-#     user_id, 
-#     total_ads, 
-#     converted, 
-#     most_ads_day
-# FROM campaign_results
-# ORDER BY total_ads DESC;
-# """
+query = """
+SELECT TOP 10 
+    user_id, 
+    total_ads, 
+    converted, 
+    most_ads_day
+FROM campaign_results
+ORDER BY total_ads DESC;
+"""
+df=pd.read_sql_query(query, engine)
+print("Query to find the top 10 users who saw the most ads:")
+#pd.set_option('display.max_columns', None)  # Show all columns
+#pd.set_option('display.width', 1000)  # Adjust display width
+print(df)
 
 # top_ads_df = pd.read_sql_query(query, engine)
 # print("--- THE TOP 10 AD CONSUMERS ---")
+# pd.set_option('display.max_columns', None)  # Show all columns
+# pd.set_option('display.width', 1000)  # Adjust display width
 # print(top_ads_df) 
 
 # task: Compare the conversion rate of the 'ad' group vs the 'psa' group
