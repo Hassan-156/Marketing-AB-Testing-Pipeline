@@ -42,7 +42,6 @@ The data ruthlessly disproved the initial hypothesis that weekends and paydays w
 ---
 
 ## 📁 Repository Structure
-* `data/`: Secure environment for raw data tracking.
 * `notebooks_and_scripts/`: Production python scripts containing SQLAlchemy connections and pipeline logic.
 * `visualizations/`: High-resolution analytical assets (Boxplots, Time-Series Line Graphs).
 
